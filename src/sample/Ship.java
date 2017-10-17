@@ -1,8 +1,6 @@
 package sample;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 import java.sql.Timestamp;
 
@@ -18,34 +16,27 @@ public class Ship {
 
 
     public Ship() {
+        this.id = new SimpleIntegerProperty();
+        this.berthNumber = new SimpleStringProperty();
+        this.bollardNumber = new SimpleStringProperty();
+        this.name = new SimpleStringProperty();
+        this.ETA = new SimpleObjectProperty<>();
+        this.ETD = new SimpleObjectProperty<>();
+        this.lastPort = new SimpleStringProperty();
+        this.nextPort = new SimpleStringProperty();
     }
-
-    public Ship(StringProperty berthNumber, StringProperty bollardNumber, StringProperty name, SimpleObjectProperty<Timestamp> ETA, SimpleObjectProperty<Timestamp> ETD, StringProperty lastPort, StringProperty nextPort) {
-        //this.id = id;
-        this.berthNumber = berthNumber;
-        this.bollardNumber = bollardNumber;
-        this.name = name;
-        this.ETA = ETA;
-        this.ETD = ETD;
-        this.lastPort = lastPort;
-        this.nextPort = nextPort;
-    }
-
 
     public int getId() {
         return id.get();
     }
 
-
     public IntegerProperty idProperty() {
         return id;
     }
 
-
     public void setId(int id) {
         this.id.set(id);
     }
-
 
     public String getBerthNumber() {
         return berthNumber.get();

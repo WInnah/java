@@ -1,12 +1,11 @@
 package sample;
 
+import javafx.beans.InvalidationListener;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 
 import java.sql.*;
-import java.util.ArrayList;
-
-
-import java.util.List;
+import java.util.*;
 
 public class ShipDaoImp {
     public void createShipTable() {
@@ -182,9 +181,11 @@ public class ShipDaoImp {
                 }
             }
         }
-
         return ships;
     }
+
+
+
 
     public List<Ship> selectByName(String name) {
         List <Ship> ships = new ArrayList<>();
