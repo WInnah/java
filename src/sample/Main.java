@@ -21,14 +21,14 @@ public class Main extends Application {
         primaryStage.show();
 
 
-        /*ObservableList<Ship> ships = ll.selectAll();
+        ObservableList<Ship> ships = ll.selectAll();
         //List<Ship> ships = pdi.selectByName("Lorcon");
         //List<Ship> ships = pdi.selectByDate(Timestamp.valueOf("2017-9-25 7:00:00"));
         System.out.println();
         for (Ship ship: ships) {
             System.out.println(ship.getId() + ". " + ship.getBerthNumber() + " " + ship.getBollardNumber() + " " + ship.getName() + " "
                     + ship.getETA() + " " + ship.getETD() + " " + ship.getLastPort() + " " + ship.getNextPort());
-        }*/
+        }
 
 
     }
